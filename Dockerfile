@@ -12,6 +12,8 @@ RUN bash /php71.sh && rm /php71.sh
 ADD toolsInstall.sh /toolsInstall.sh
 RUN bash /toolsInstall.sh && rm /toolsInstall.sh
 
+RUN ln -s /usr/local/php-7.1.1/bin/php /usr/bin/php
+
 RUN mkdir /home/workspace
 VOLUME ["/home/workspace"]
 
